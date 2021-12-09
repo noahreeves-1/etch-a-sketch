@@ -1,0 +1,18 @@
+.row {
+    background-color: lightskyblue;
+    /* padding: 10px; */
+    border-style: solid;
+    border-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.column {
+    background-color: lightpink;
+    padding 20px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    flex-grow: 1;
+}

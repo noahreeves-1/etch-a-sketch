@@ -34,11 +34,20 @@ createColumns();
 
 // adds effect where the grid gets colored in if the mouse HOVERS over it
 
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 function colorGrid() {
     const columns = document.querySelectorAll('.column');
     columns.forEach((grid) => {
         grid.addEventListener('mouseenter', e => {
-            grid.style.backgroundColor = '#000000';
+            grid.style.backgroundColor = getRandomColor();
         });
     });
 }

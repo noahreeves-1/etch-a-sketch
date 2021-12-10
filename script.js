@@ -66,7 +66,9 @@ const resetButton = document.querySelector('.reset');
 
 resetButton.addEventListener('click', e => {
     n = prompt();
-    if (n <= 100) {
+    if (n <= 0) {
+        alert('It must be a positive number!');
+    } else if (n <= 100) {
         removeGrid();
         createRows();
         createColumns();

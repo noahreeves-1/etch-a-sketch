@@ -1,11 +1,25 @@
 h1 {
     text-align: center;
     margin: 30px;
+    font-size: 40px;
+    color: yellow;
+    font-style: italic;
 }
 
 body {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 110px;
+    margin-right: 110px;
+    background-color: rgb(64, 200, 224);
+}
+
+.description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .button-container {
@@ -20,6 +34,22 @@ body {
 
 .reset {
     width: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.outside-container {
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background-color: rgba(252, 77, 64, 0.89);
+    width: 700px;
 }
 
 .container {
@@ -32,7 +62,7 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: lightgrey;
-    padding: 10px;
+    background-color: white;
 }
 
 .row {

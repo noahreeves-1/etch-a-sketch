@@ -2,14 +2,14 @@ h1 {
     text-align: center;
     margin: 30px;
     font-size: 40px;
-    color: yellow;
+    color: rgb(255, 166, 0);
     font-style: italic;
 }
 
 body {
     margin-left: 110px;
     margin-right: 110px;
-    background-color: rgb(64, 200, 224);
+    background-color: rgb(0, 54, 90);
 }
 
 .description {
@@ -22,24 +22,6 @@ body {
     font-family: Arial, Helvetica, sans-serif
 }
 
-.button-container {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    width: 100px;
-    height: 50px;
-    display: flex;
-}
-
-.reset {
-    width: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 10px;
-}
-
 .outside-container {
     padding-top: 10px;
     padding-bottom: 8px;
@@ -48,7 +30,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
-    background-color: rgba(252, 77, 64, 0.89);
+    background-color: rgb(219, 30, 16);
     width: 700px;
 }
 
@@ -62,7 +44,36 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: lightgrey;
-    background-color: white;
+    background-color: #E3E3E3;
+}
+
+.button-container {
+    margin: 25px 75px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.classic {
+    width: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.reset {
+    width: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.rainbow {
+    width: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 10px;
 }
 
 .row {
@@ -74,8 +85,4 @@ body {
 .column {
     display: flex;
     flex-grow: 1;
-}
-
-.column:hover {
-    background-color: black;
 }

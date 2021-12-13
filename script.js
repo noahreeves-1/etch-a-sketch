@@ -43,23 +43,59 @@ function getRandomColor() {
     return color;
 }
 
-function colorGrid() {
+function colorGridRainbow() {
     const columns = document.querySelectorAll('.column');
     columns.forEach((grid) => {
         grid.addEventListener('mouseenter', e => {
             grid.style.backgroundColor = getRandomColor();
         });
     });
-}
+};
 
-colorGrid();
+let count = 0;
+
+function colorGridGrey() {
+    const columns = document.querySelectorAll('.column');
+
+    columns.forEach((grid) => {
+        grid.addEventListener('mouseenter', e => {
+            grid.style.backgroundColor = '#3b3b3b';
+        });
+        grid.addEventListener('mouseleave', e => {
+            count++;
+        })
+    });
+};
+
+colorGridGrey();
+console.log('count :' + count);
 
 // removes all children from container
-function removeGrid() {
+function clearGrid() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
-}
+};
+
+// clear grid and make grey
+const classicButton = document.querySelector('.classic');
+
+classicButton.addEventListener('click', e => {
+    clearGrid();
+    createRows();
+    createColumns();
+    colorGridGrey();
+})
+
+// clear grid and make rainbow
+const rainbowButton = document.querySelector('.rainbow');
+
+rainbowButton.addEventListener('click', e => {
+    clearGrid();
+    createRows();
+    createColumns();
+    colorGridRainbow();
+})
 
 // add a RESET button
 const resetButton = document.querySelector('.reset');
@@ -69,10 +105,10 @@ resetButton.addEventListener('click', e => {
     if (n <= 0) {
         alert('It must be a positive number!');
     } else if (n <= 100) {
-        removeGrid();
+        clearGrid();
         createRows();
         createColumns();
-        colorGrid();
+        colorGridGrey();
     } else {
         alert("Please pick a number that less than or equal to 100." + "\n" +
             "\n" + "We don't want to crash the computer!");

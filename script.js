@@ -56,15 +56,12 @@ let count = 0;
 
 function colorGridGrey() {
     const columns = document.querySelectorAll('.column');
-
+    
     columns.forEach((grid) => {
-        grid.addEventListener('mouseenter', e => {
+        grid.addEventListener('mouseover', e => {
             grid.style.backgroundColor = '#3b3b3b';
-        });
-        grid.addEventListener('mouseleave', e => {
-            count++;
         })
-    });
+    })
 };
 
 colorGridGrey();

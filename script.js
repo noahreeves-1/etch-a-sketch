@@ -8,6 +8,7 @@ let n = 16
 // function that creates ROWS
 function createRows() {
     const container = document.getElementById('container');
+
     for (i = 0; i < n; i++) {
         let row = document.createElement('div');
         row.classList.add('row');
@@ -21,6 +22,7 @@ createRows();
 
 function createColumns() {
     const rows = document.querySelectorAll('.row');
+
     rows.forEach((eachRow) => {
         for (i = 0; i < n; i++) {
             let column = document.createElement('div');
@@ -45,14 +47,13 @@ function getRandomColor() {
 
 function colorGridRainbow() {
     const columns = document.querySelectorAll('.column');
+
     columns.forEach((grid) => {
         grid.addEventListener('mouseenter', e => {
             grid.style.backgroundColor = getRandomColor();
         });
     });
 };
-
-let count = 0;
 
 function colorGridGrey() {
     const columns = document.querySelectorAll('.column');
@@ -65,7 +66,7 @@ function colorGridGrey() {
 };
 
 colorGridGrey();
-console.log('count :' + count);
+// console.log('count :' + count);
 
 // removes all children from container
 function clearGrid() {
